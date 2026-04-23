@@ -634,6 +634,106 @@
             }
         }
 
+        /* Recommendations Section */
+        .recommendations {
+            background: linear-gradient(to bottom, var(--cream), #ebebe6);
+        }
+
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .recommendation-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 3px solid var(--gold);
+            transition: all 0.4s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .recommendation-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--charcoal);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .recommendation-quote::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: -1rem;
+            left: -0.5rem;
+            line-height: 1;
+        }
+
+        .recommendation-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            border: 2px solid var(--gold);
+        }
+
+        .author-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 500;
+            color: var(--navy);
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .author-role {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 0.1rem;
+        }
+
+        .author-branch {
+            display: inline-block;
+            padding: 0.15rem 0.6rem;
+            background: rgba(201, 169, 110, 0.15);
+            color: var(--gold);
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            margin-top: 0.3rem;
+            width: fit-content;
+        }
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -659,6 +759,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Career</a></li>
             <li><a href="#qualities">Qualities</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
             <li><a href="#interests">Interests</a></li>
         </ul>
     </nav>
@@ -914,7 +1015,89 @@
             </div>
         </div>
     </section>
+    
+        </section>
 
+    <!-- Recommendations -->
+    <section id="recommendations" class="recommendations">
+        <div class="section-header reveal">
+            <p class="section-tag">Voices of CUSA</p>
+            <h2 class="section-title">What Others Say</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="recommendations-grid">
+            <!-- Recommendation 1 -->
+            <div class="recommendation-card reveal">
+                <p class="recommendation-quote">
+                    Miska has consistently demonstrated exceptional leadership during our fleet operations. 
+                    Their ability to remain calm under pressure and guide the team to success is unmatched. 
+                    A true asset to the Navy and CUSA as a whole.
+                </p>
+                <div class="recommendation-author">
+                    <div class="author-avatar">V</div>
+                    <div class="author-info">
+                        <span class="author-name">Vlotukk</span>
+                        <span class="author-role">Fleet Forces Commander</span>
+                        <span class="author-branch">U.S. Navy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendation 2 -->
+            <div class="recommendation-card reveal">
+                <p class="recommendation-quote">
+                    Working alongside Miska in the Department of Justice was a privilege. 
+                    Their fairness, attention to detail, and respect for the rule of law made them one of 
+                    the most reliable judges I have ever served with.
+                </p>
+                <div class="recommendation-author">
+                    <div class="author-avatar">J</div>
+                    <div class="author-info">
+                        <span class="author-name">[Name]</span>
+                        <span class="author-role">Attorney General</span>
+                        <span class="author-branch">Department of Justice</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendation 3 -->
+            <div class="recommendation-card reveal">
+                <p class="recommendation-quote">
+                    As Moderation Director, Miska transformed how our team handled community issues. 
+                    Patient, fair, and always willing to mentor new staff. The community is better because of their service.
+                </p>
+                <div class="recommendation-author">
+                    <div class="author-avatar">S</div>
+                    <div class="author-info">
+                        <span class="author-name">[Name]</span>
+                        <span class="author-role">Community Manager</span>
+                        <span class="author-branch">CUSA Staff Team</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendation 4 -->
+            <div class="recommendation-card reveal">
+                <p class="recommendation-quote">
+                    I served under Miska during their time in the Secret Service. 
+                    Their protective instincts and tactical awareness kept our detail safe on every operation. 
+                    I would follow their lead anywhere.
+                </p>
+                <div class="recommendation-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                        <span class="author-name">[Name]</span>
+                        <span class="author-role">Special Agent</span>
+                        <span class="author-branch">U.S. Secret Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="interests">
     <!-- Interests -->
     <section id="interests" class="interests">
         <div class="section-header reveal">
